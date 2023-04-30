@@ -3,7 +3,7 @@
 
 {% block extrastyle %}
 {{ block.super }}
-{% include 'admin/inc/extrastyle.html' %}
+{% include 'override/inc/extrastyle.html' %}
 {% endblock %}
 
 {% block extrahead %}
@@ -12,14 +12,14 @@
 <link rel="stylesheet" type="text/css" href="{% static 'djangocms_admin_style/css/djangocms-admin.css' %}" />
 {% if request.user.is_superuser %}{% render_update_notification %}{% endif %}
 <script src="{% static 'djangocms_admin_style/js/dist/bundle.adminstyle.min.js' %}"></script>
-{% include 'admin/inc/extrahead.html' %}{% endblock %}
+{% include 'override/inc/extrahead.html' %}{% endblock %}
 
-{% block title %}{% include 'admin/inc/title.html' %}{% endblock %}
+{% block title %}{% include 'override/inc/title.html' %}{% endblock %}
 
 {% block bodyclass %}{{ block.super }} djangocms-admin-style{% endblock %}
 
-{% block branding %}{% include 'admin/inc/branding.html' %}{% endblock %}
+{% block branding %}{% include 'override/inc/branding.html' %}{% endblock %}
 
-{% block userlinks %}{% include 'admin/inc/userlinks.html' %}{{ block.super }}{% endblock %}
+{% block userlinks %}{% include 'override/inc/userlinks.html' %}{{ block.super }}{% endblock %}
 
 {% block nav-global %}{% endblock %}
